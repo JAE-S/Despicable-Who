@@ -1,34 +1,44 @@
+ // Import React 
+// =========================================================
 import React from 'react';
-import Button from 'react-materialize/lib/Button';
-import Modal from 'react-materialize/lib/Modal';
 
+ // Components
+// =========================================================
+import AppFooter from "./components/Footer";
+// import Header from "./components/Header";
+import Wrapper from "./components/Wrapper";
+
+
+ // Pages 
+// =========================================================
+import Game from "./pages/Game";
+
+ // CSS
+// =========================================================
 import './App.css';
 
+ // Export App to index.js
+// =========================================================
 function App() {
-  const trigger = <Button>Open Modal</Button>;
+ 
   return (
+    < >
+     
+      <Wrapper> 
+     
+        <Game/>
+      </Wrapper>
+      <AppFooter/>
+    </>
     
-    <div className="App">
-      <header className="App-header">
-       
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-         
-      <Modal header="Modal Header" trigger={trigger}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </Modal>
-
-        </a>
-      </header>
-    </div>
   );
 }
 
 export default App;
+
+// import Button from 'react-materialize/lib/Button';
+// import Modal from 'react-materialize/lib/Modal';
+ // const trigger = <Button>Open Modal</Button>;
+//  <Modal header="Modal Header" trigger={trigger}>
+//  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+// </Modal>
