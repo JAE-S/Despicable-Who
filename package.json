@@ -4,6 +4,8 @@
   "engines": {
     "node": "10.16.3"
   },
+
+  "homepage" : "https://despicable-who.herokuapp.com/",
   "description": "Despicable-Who? Guessing Game application",
   "main": "server.js",
   "scripts": {
