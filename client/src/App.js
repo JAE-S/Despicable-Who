@@ -1,31 +1,61 @@
  // Import React 
 // =========================================================
-import React from 'react';
+import React, {Component } from 'react';
 
  // Components
 // =========================================================
 import AppFooter from "./components/Footer";
 import Wrapper from "./components/Wrapper";
 import Header from "./components/Header";
+import Row from "react-materialize/lib/Row";
+import Col from "react-materialize/lib/Col"
+import MinionPhoto from "./components/MinionPhoto"
 
  // CSS
 // =========================================================
 import './App.css';
 
- // Export App to index.js
+ // Import JSON
 // =========================================================
-function App() {
- 
-  return (
-    < >
-     
-      <Wrapper> 
-        <Header/>
-      </Wrapper>
-      <AppFooter/>
-    </>
-    
-  );
+import minions from "./minions.json"
+
+ // Set state & Exportt App 
+// =========================================================
+class App extends Component {
+ state = {
+   minions
+ }; 
+
+ chosenMinion = id => {
+   const minions = this.state.mionions.filter(minion => minion.id !== id);
+   this.state({ minions })
+ }
+
+  render() {
+    return (
+      < >
+        <Wrapper> 
+          <Header/>
+          <Row>
+            <Col className="s4">
+            </Col>
+            <Col className="s8">
+          {this.state.minions.map(minion => (
+            <MinionPhoto 
+            chosenMinion = {this.chosenMinion}
+            id={minion.id}
+            key={minion.id}
+            image={minion.image}
+            />
+          ))}
+          </Col>
+          </Row>
+        </Wrapper>
+        <AppFooter/>
+      </>
+      
+    );
+  }
 }
 
 export default App;
