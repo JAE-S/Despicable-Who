@@ -5,7 +5,6 @@ import React from 'react';
  // Pages 
 // =========================================================
 import Game from "./pages/Game";
-
  // Components
 // =========================================================
 import AppFooter from "./components/Footer";
