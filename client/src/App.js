@@ -2,13 +2,11 @@
 // =========================================================
 import React from 'react';
 
- // Pages 
-// =========================================================
-import Game from "./pages/Game";
  // Components
 // =========================================================
 import AppFooter from "./components/Footer";
 import Wrapper from "./components/Wrapper";
+import Header from "./components/Header";
 
  // CSS
 // =========================================================
@@ -22,8 +20,7 @@ function App() {
     < >
      
       <Wrapper> 
-     
-        <Game/>
+        <Header/>
       </Wrapper>
       <AppFooter/>
     </>
