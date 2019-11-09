@@ -7,6 +7,7 @@ import React, {Component } from 'react';
 import AppFooter from "./components/Footer";
 import Wrapper from "./components/Wrapper";
 import Header from "./components/Header";
+import LeftSide from "./components/LeftSide";
 import Row from "react-materialize/lib/Row";
 import Col from "react-materialize/lib/Col"
 import MinionPhoto from "./components/MinionPhoto"
@@ -30,16 +31,20 @@ class App extends Component {
    const minions = this.state.mionions.filter(minion => minion.id !== id);
    this.state({ minions })
  }
+ 
 
   render() {
+   
     return (
+      
       < >
         <Wrapper> 
           <Header/>
           <Row>
-            <Col className="s4">
+            <Col className="s5">
+            <LeftSide/>
             </Col>
-            <Col className="s8">
+            <Col className="s7" style={{ marginTop: "19px"}}>
           {this.state.minions.map(minion => (
             <MinionPhoto 
             chosenMinion = {this.chosenMinion}
