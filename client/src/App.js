@@ -2,16 +2,14 @@
 // =========================================================
 import React from 'react';
 
- // Components
-// =========================================================
-import AppFooter from "./components/Footer";
-// import Header from "./components/Header";
-import Wrapper from "./components/Wrapper";
-
-
  // Pages 
 // =========================================================
 import Game from "./pages/Game";
+
+ // Components
+// =========================================================
+import AppFooter from "./components/Footer";
+import Wrapper from "./components/Wrapper";
 
  // CSS
 // =========================================================
