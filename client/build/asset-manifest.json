@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.1417bbf5.chunk.css",
-    "main.js": "/static/js/main.4da44b9d.chunk.js",
-    "main.js.map": "/static/js/main.4da44b9d.chunk.js.map",
+    "main.css": "/static/css/main.58451cf9.chunk.css",
+    "main.js": "/static/js/main.9da5d5ec.chunk.js",
+    "main.js.map": "/static/js/main.9da5d5ec.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.31d679a0.js",
     "runtime-main.js.map": "/static/js/runtime-main.31d679a0.js.map",
-    "static/js/2.1960be57.chunk.js": "/static/js/2.1960be57.chunk.js",
-    "static/js/2.1960be57.chunk.js.map": "/static/js/2.1960be57.chunk.js.map",
+    "static/js/2.b8a9beba.chunk.js": "/static/js/2.b8a9beba.chunk.js",
+    "static/js/2.b8a9beba.chunk.js.map": "/static/js/2.b8a9beba.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.bfc0ef5839190b3ad2a0f3d9edd1fd36.js": "/precache-manifest.bfc0ef5839190b3ad2a0f3d9edd1fd36.js",
+    "precache-manifest.32d9ae2fbe7bb936c9d6c52f84c45167.js": "/precache-manifest.32d9ae2fbe7bb936c9d6c52f84c45167.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.1417bbf5.chunk.css.map": "/static/css/main.1417bbf5.chunk.css.map"
+    "static/css/main.58451cf9.chunk.css.map": "/static/css/main.58451cf9.chunk.css.map",
+    "static/media/style.css": "/static/media/despicable_who_logo.6adb59c7.png"
   },
   "entrypoints": [
     "static/js/runtime-main.31d679a0.js",
-    "static/js/2.1960be57.chunk.js",
-    "static/css/main.1417bbf5.chunk.css",
-    "static/js/main.4da44b9d.chunk.js"
+    "static/js/2.b8a9beba.chunk.js",
+    "static/css/main.58451cf9.chunk.css",
+    "static/js/main.9da5d5ec.chunk.js"
   ]
 }
