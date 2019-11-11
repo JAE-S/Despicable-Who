@@ -23,40 +23,48 @@ import minions from "./minions.json"
  // Set state & Exportt App 
 // =========================================================
 class App extends Component {
- state = {
-   minions,
-   clicked: false, 
-   image: "",
-   score: 0, 
-   highScore: 0, 
-   guessedCorrectly: true, 
+  constructor(props) {
+    super(props);
+    this.state = {
+      minions: minions,
+      message: "Select a minion to begin",
+      guessed: [], 
+      highScore: 0, 
+      score: 0
+    };
  }; 
 
- handleBtnClick = event => {
-  alert("something was clicked")
-
-  this.setState({minions: this.shuffleMinions(this.state.minions) })
-
-
+   // Shuffle the minions before the component mounts
+   componentWillMount() {
+    this.shuffleMinions();
   }
 
-  shuffleMinions = minions => {
-    let i = minions.length - 1; 
-    while (i > 0) {
-      const j = Math.floor(Math.random() * (i + 1)); 
-      const temp = minions[i];
-      minions[i] = minions[j];
-      minions[j] = temp; 
-      i--; 
+ handleBtnClick = event => {
+   let minionID = event.target.id
+  
+   this.state.guessed.push(minionID); 
+  console.log( this.state.guessed)
+   this.shuffleMinions();
+
+}
+  // Shuffle minions on click 
+  shuffleMinions = () => {
+    let minionsArray = this.state.minions; 
+    
+    for(let i = minionsArray.length - 1; i > 0; i--){
+      let randomNum = Math.floor(Math.random() * (i + 1));
+      [minionsArray[i], minionsArray[randomNum]] =  [minionsArray[randomNum], minionsArray[i]]
     }
-    return minions; 
+     this.setState({
+       minions: minionsArray
+     })
   }
 
   render() {
    
     return (
       
-      < >
+      <main>
         <Wrapper> 
           <Header/>
           <Row>
@@ -65,20 +73,20 @@ class App extends Component {
             </Col>
             <Col className="s7" style={{ marginTop: "19px"}}>
   
-            {this.state.minions.map(minion => (
+            {this.state.minions.map((minion, i) => (
             <MinionPhoto 
+            key={i}
             id={minion.id}
-            key={minion.id}
             image={minion.image}
-            clicked={minion.clicked}
-            handleBtnClick= {this.handleBtnClick}
+            guessed={minion.guessed}
+            handleBtnClick= {this.handleBtnClick.bind(this)}
             />
           ))}
           </Col>
           </Row>
         </Wrapper>
         <AppFooter/>
-      </>
+      </main>
       
     );
   }

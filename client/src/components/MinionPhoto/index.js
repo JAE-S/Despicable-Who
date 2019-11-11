@@ -5,9 +5,10 @@ function MinionPhoto(props) {
     return (
     
         <img 
-            className="minionProfile responsive-img" 
+            className={`minionProfile responsive-img`}
             alt={props.name} 
             src={props.image}
+            id={props.id}
             onClick={props.handleBtnClick}
         />
     
