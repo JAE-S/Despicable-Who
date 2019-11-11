@@ -5,7 +5,7 @@ function MinionPhoto(props) {
     return (
     
         <img 
-            className={`minionProfile responsive-img`}
+            className={`minionProfile responsive-img right-align`}
             alt={props.name} 
             src={props.image}
             id={props.id}
