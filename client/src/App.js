@@ -27,7 +27,7 @@ class App extends Component {
     super(props);
     this.state = {
       minions: minions,
-      message: "Select a minion to begin",
+      status: "Select a minion to begin",
       guessed: [], 
       highScore: 0, 
       score: 0
@@ -40,11 +40,23 @@ class App extends Component {
   }
 
  handleBtnClick = event => {
-   let minionID = event.target.id
-  
-   this.state.guessed.push(minionID); 
-  console.log( this.state.guessed)
-   this.shuffleMinions();
+  // Grab the id of the minion clicked
+  let minionID = event.target.id
+  let guessedArray = this.state.guessed.length
+  let mArray = this.state.minions.length
+
+  if (this.state.guessed.includes(minionID) && guessedArray !== mArray){
+    this.gameOver();     
+  } 
+  else if (!this.state.guessed.includes(minionID)) {
+      // Push the minion that was guessed to the guessed array 
+      this.state.guessed.push(minionID); 
+      // console.log( this.state.guessed)
+      this.correctGuess();
+  } else {
+    this.wonGame();
+  }
+  this.shuffleMinions();
 
 }
   // Shuffle minions on click 
@@ -59,6 +71,26 @@ class App extends Component {
        minions: minionsArray
      })
   }
+  // Guessed wrong image
+  gameOver = () => {
+    alert("GAME OVER!")
+  }
+  // Guessed an image correctly 
+  correctGuess = () => {
+  // Update score  
+  let score = this.state.score + 1; 
+  let highScore = score > this.state.highScore ? score : this.state.highScore;
+    this.setState({
+      highScore, 
+      score,
+      status: "Correct! "
+    })
+  }
+  // Won game 
+  wonGame = () => {
+    alert("Congradulations, You Won!")
+  }
+
 
   render() {
    
