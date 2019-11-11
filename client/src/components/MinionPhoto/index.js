@@ -4,7 +4,12 @@ import "./style.css";
 function MinionPhoto(props) {
     return (
     
-        <img className="minionProfile" alt={props.name} src={props.image} />
+        <img 
+            className="minionProfile responsive-img" 
+            alt={props.name} 
+            src={props.image}
+            onClick={props.handleBtnClick}
+        />
     
     )
 }

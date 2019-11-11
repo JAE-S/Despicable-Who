@@ -24,14 +24,33 @@ import minions from "./minions.json"
 // =========================================================
 class App extends Component {
  state = {
-   minions
+   minions,
+   clicked: false, 
+   image: "",
+   score: 0, 
+   highScore: 0, 
+   guessedCorrectly: true, 
  }; 
 
- chosenMinion = id => {
-   const minions = this.state.mionions.filter(minion => minion.id !== id);
-   this.state({ minions })
- }
- 
+ handleBtnClick = event => {
+  alert("something was clicked")
+
+  this.setState({minions: this.shuffleMinions(this.state.minions) })
+
+
+  }
+
+  shuffleMinions = minions => {
+    let i = minions.length - 1; 
+    while (i > 0) {
+      const j = Math.floor(Math.random() * (i + 1)); 
+      const temp = minions[i];
+      minions[i] = minions[j];
+      minions[j] = temp; 
+      i--; 
+    }
+    return minions; 
+  }
 
   render() {
    
@@ -45,12 +64,14 @@ class App extends Component {
             <LeftSide/>
             </Col>
             <Col className="s7" style={{ marginTop: "19px"}}>
-          {this.state.minions.map(minion => (
+  
+            {this.state.minions.map(minion => (
             <MinionPhoto 
-            chosenMinion = {this.chosenMinion}
             id={minion.id}
             key={minion.id}
             image={minion.image}
+            clicked={minion.clicked}
+            handleBtnClick= {this.handleBtnClick}
             />
           ))}
           </Col>

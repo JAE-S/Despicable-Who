@@ -11,7 +11,7 @@ function AppFooter() {
         <Footer className="footer">
     
        </Footer>
-       <Row className="copyright">Despicable Who? 2019 </Row>
+       <Row className="copyright center-align">Despicable Who? 2019 </Row>
 
        </>
     );

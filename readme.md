@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="Despicable-Who/client/public/images/despicable_who_logo.svg" title="Despicable Who?">
+  <img src="client/public/images/despicable_who_logo.svg" title="Despicable Who?">
 </p>
 
 # Welcome to Despicable Who? 
@@ -48,7 +48,7 @@
 
 <details><summary><b>Click To View</b></summary>
  
-         ```
+
          Despicable Who
          ├── Client
          │   ├── build
@@ -93,7 +93,6 @@
          ├── package.json
          ├── README.md
          └── server.js
-         ```
 
 
 </details>

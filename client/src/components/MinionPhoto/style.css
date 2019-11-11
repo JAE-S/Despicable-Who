@@ -1,6 +1,7 @@
 .minionProfile {
-    width: 150px;
-    height: 150px;
+    max-width: 150px!important;
+    width: 100%!important;
+    height: auto; 
     border: 1px solid #D78618;
     margin: 5px 5px 0px 5px; 
     border-radius: 10px; 

@@ -2,61 +2,73 @@
     {
         "id": 1,
         "name": "minion 1", 
-        "image": "./images/minion_1.jpg"
+        "image": "./images/minion_1.jpg",
+        "clicked": false
     },
     {
         "id": 2,
         "name": "minion 2", 
-        "image": "./images/minion_2.jpg"
+        "image": "./images/minion_2.jpg",
+        "clicked": false
     },
     {
         "id": 3,
         "name": "minion 3", 
-        "image": "./images/minion_3.jpg"
+        "image": "./images/minion_3.jpg",
+        "clicked": false
     },
     {
         "id": 4,
         "name": "minion 4", 
-        "image": "./images/minion_4.jpg"
+        "image": "./images/minion_4.jpg",
+        "clicked": false
     },
     {
         "id": 5,
         "name": "minion 5", 
-        "image": "./images/minion_5.jpg"
+        "image": "./images/minion_5.jpg",
+        "clicked": false
     },
     {
         "id": 6,
         "name": "minion 6", 
-        "image": "./images/minion_6.jpg"
+        "image": "./images/minion_6.jpg",
+        "clicked": false
     },
     {
         "id": 7,
         "name": "minion 7", 
-        "image": "./images/minion_7.jpg"
+        "image": "./images/minion_7.jpg",
+        "clicked": false
     },
     {
         "id": 8,
         "name": "minion 8", 
-        "image": "./images/minion_8.jpg"
+        "image": "./images/minion_8.jpg",
+        "clicked": false
     },
     {
         "id": 9,
         "name": "minion 9", 
-        "image": "./images/minion_9.jpg"
+        "image": "./images/minion_9.jpg",
+        "clicked": false
     },
     {
         "id": 10,
         "name": "minion 10", 
-        "image": "./images/minion_10.jpg"
+        "image": "./images/minion_10.jpg",
+        "clicked": false
     },
     {
         "id": 11,
         "name": "minion 11", 
-        "image": "./images/minion_11.jpg"
+        "image": "./images/minion_11.jpg",
+        "clicked": false
     },
     {
         "id": 12,
         "name": "minion 12", 
-        "image": "./images/minion_12.jpg"
+        "image": "./images/minion_12.jpg",
+        "clicked": false
     }
 ]
