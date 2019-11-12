@@ -1,14 +1,16 @@
 import React from "react";
 
-
 function LeftContainer(props) {
+  
   const Left = {
     backgroundColor: "#D78618",
     width: "100%",
+    minHeight: "200px",
     height: "500px",
     marginTop: "5px",
+    marginRight: "10px",
     borderRadius: "10px",
-    paddingRight: "0px", 
+    padding: "20px", 
     flex: "2 1 0 "
   }
 
@@ -18,6 +20,5 @@ function LeftContainer(props) {
       </div>
   )
 }
-
 
 export default LeftContainer; 

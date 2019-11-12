@@ -1,10 +1,18 @@
+* {
+    box-sizing: border-box;
+  }
+  *, *::after, *::before {
+    box-sizing: border-box;
+  }
 .minionProfile {
-    max-width: 150px!important;
-    width: 100%!important;
-    height: auto; 
+    width: calc(50% / 7 * 3);
+   /* width: 100%; */
+    height: calc(50% / 7 * 3);
     border: 1px solid #D78618;
-    margin: 5px 5px 0px 5px; 
+    margin: 5px 5px 5px 5px; 
     border-radius: 10px; 
+    /* flex: 0 3; */
+
 }
 
 .minionProfile:hover {
@@ -16,7 +24,6 @@
 } 
 
  /* Flashing */
-
  @-webkit-keyframes flash {
 	0% {
 		opacity: .4;
