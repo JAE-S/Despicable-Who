@@ -30,7 +30,7 @@
   "homepage": "https://github.com/JAE-S/Despicable-Who#readme",
   "dependencies": {
     "concurrently": "^5.0.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "if-env": "^1.0.4",
     "nodemon": "^1.19.4",
     "path": "^0.12.7"
